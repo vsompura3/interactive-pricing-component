@@ -1,0 +1,21 @@
+{
+  "name": "interactive-pricing-component-main",
+  "version": "1.0.0",
+  "description": "A frontend mentor challange",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build --base=./",
+    "serve": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "author": "Vaibhav Sompura",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.20.0",
+    "gh-pages": "^4.0.0",
+    "postcss-preset-env": "^7.7.2",
+    "vite": "^3.0.2"
+  }
+}
