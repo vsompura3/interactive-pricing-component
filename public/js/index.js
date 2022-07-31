@@ -2,6 +2,7 @@ const pricingSlider = document.querySelector('#price-range')
 const priceToggle = document.querySelector('#price-toggle')
 const pageViewEl = document.querySelector('.pricing-selection > p')
 const priceEl = document.querySelector('.price > span')
+const discountBadge = document.querySelector('.pricing-toggle > p')
 
 const state = {
   currentPlan: priceToggle.checked ? 'annual' : 'monthly',
@@ -51,3 +52,14 @@ function browsePlans() {
 
 priceToggle.addEventListener('change', checkForPlan)
 pricingSlider.addEventListener('input', browsePlans)
+
+function changeDiscountBadge() {
+  if (window.innerWidth > '480') {
+    discountBadge.textContent = '25% Discount'
+  } else {
+    discountBadge.textContent = '-25%'
+  }
+}
+
+window.onload = changeDiscountBadge
+window.addEventListener('resize', changeDiscountBadge)
